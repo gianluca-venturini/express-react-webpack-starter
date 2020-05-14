@@ -54,6 +54,7 @@ const frontendBuild = (name, entryFile, outputFile) => ({
     watch: IS_WATCH,
     devServer: {
         historyApiFallback: true, // replace 404 page with index.html for client-side routing
+        port: 8000,
         proxy: {
             '/api': {
                 target: 'http://localhost:8080',

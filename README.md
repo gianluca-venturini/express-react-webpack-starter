@@ -19,6 +19,7 @@ A starter Webpack 4 configuration for basic projects with Express and React.
 
 ## Usage
 - Install packages: `yarn install`
-- Build application: `npm run build`
+- Build application (both frontend and backend): `npm run build`
 - Watch for changes and build application: `npm run build-watch`
-- Run application: `npm start`
+- Build frontend, watch for changes and hot reload (port 8000): `npm run build-hot-reload`
+- Run application (port 8080): `npm start`

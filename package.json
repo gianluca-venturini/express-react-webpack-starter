@@ -1,14 +1,14 @@
 {
   "name": "webpack-start",
   "version": "1.0.0",
-  "repository": "git@github.com:gianluca-venturini/webpack-start.git",
+  "repository": "git@github.com:gianluca-venturini/express-react-webpack-starter.git",
   "author": "Gianluca Venturini <gianluca@stellarite.io>",
   "license": "MIT",
   "scripts": {
     "build": "PROJECTS=frontend,backend webpack --progress --colors",
     "build-watch": "PROJECTS=frontend,backend WATCH=true webpack --progress --colors",
     "start": "node --inspect dist/server.js",
-    "server-dev": "webpack-dev-server --mode=development"
+    "build-hot-reload": "PROJECTS=frontend webpack-dev-server --mode=development"
   },
   "engines": {
     "yarn": "^1.10.1",
