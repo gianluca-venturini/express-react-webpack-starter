@@ -1,1 +1,3 @@
-console.log('test');
+import { start } from "./App";
+
+start();
