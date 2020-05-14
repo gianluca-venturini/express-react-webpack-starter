@@ -1,5 +1,6 @@
 const webpack = require('webpack');
 const path = require('path');
+const nodeExternals = require('webpack-node-externals');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const PROJECTS = (process.env.PROJECTS || '').split(',');
@@ -68,13 +69,17 @@ const frontendBuild = (name, entryFile, outputFile) => ({
         "react": "React",
         "react-dom": "ReactDOM"
     },
-    plugins: [sourceMapBannerPlugin, htmlPlugin]
+    plugins: [htmlPlugin]
 });
 
 const backendBuild = (name, entryFile, outputFile = 'server.js') => {
     return {
         name: name,
         target: 'node',
+        node: {
+            __dirname: false,
+            __filename: false,
+        },
         entry: entryFile,
         output: {
             path: __dirname + '/dist',
@@ -86,6 +91,8 @@ const backendBuild = (name, entryFile, outputFile = 'server.js') => {
         mode: 'development',
         devtool: 'source-map',
         resolve: resolveConfig,
+        // ignores node_modules
+        externals: [nodeExternals()],
         plugins: [sourceMapBannerPlugin]
     };
 }
