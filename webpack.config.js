@@ -101,8 +101,10 @@ const backendBuild = (name, entryFile, outputFile = 'server.js') => {
 const availableProjects = {
 
     frontend: frontendBuild('frontend', './src/frontend/main.ts', 'bundle.js'),
-
+    
     backend: backendBuild('backend', './src/backend/main.ts', 'server.js'),
+    
+    test: backendBuild('test', './src/test.ts', 'test.js'),
 
 };
 

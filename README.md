@@ -15,11 +15,15 @@ A starter Webpack 4 configuration for basic projects with Express and React.
 ## Development
 - Download and install VSCode: https://code.visualstudio.com/
 - Read the setup guide https://code.visualstudio.com/docs/setup/setup-overview
-    - Launching from the command line: Open the Command Palette (F1) and type `shell command` to find the `Shell Command: Install 'code' command in PATH command`.
+    - Launching VSCode from the command line: Open the Command Palette (F1) and type `shell command` to find the `Shell Command: Install 'code' command in PATH command`
+        - After doing this you can start VSCode on a repo with `code .`
 
 ## Usage
-- Install packages: `yarn install`
-- Build application (both frontend and backend): `npm run build`
-- Watch for changes and build application: `npm run build-watch`
-- Build frontend, watch for changes and hot reload (port 8000): `npm run build-hot-reload`
-- Run application (port 8080): `npm start`
+- Install dependencies: `yarn install`
+- Build application (both frontend and backend): `yarn build`
+- Watch for changes and build application: `yarn build-watch`
+- Build frontend, watch for changes and hot reload (port 8000): `yarn build-hot-reload`
+    - All the backend requests will be forwarded to port 8080 so you need to run the backend
+- Run application (port 8080): `yarn start`
+- Run tests: `yarn test`
+- Remove all the generated files: `yarn clean`
