@@ -1,6 +1,6 @@
-describe('Example test suite', function() {
+describe('Example test suite', () => {
 
-    it('Example test', function() {
+    it('Example test', () => {
         const a = true;
 
         expect(a).toBe(true);
