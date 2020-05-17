@@ -1,4 +1,3 @@
-import fetch from 'node-fetch';
 import * as React from 'react';
 import { render } from 'react-dom';
 
