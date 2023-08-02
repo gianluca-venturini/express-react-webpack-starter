@@ -10,7 +10,6 @@
       "noEmitOnError": true,
       "noUnusedLocals": true,
       "noUnusedParameters": false,
-      "suppressImplicitAnyIndexErrors": true,
       "removeComments": false,
       "jsx": "react",
       "outDir": "dist",
