@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { render } from 'react-dom';
+import { createRoot } from 'react-dom/client';
 
 interface AppProps {
     name: string;
@@ -40,5 +40,6 @@ export class App extends React.Component<AppProps, AppState> {
 
 export function start() {
     const rootElem = document.getElementById('main');
-    render(<App name="Hello World" />, rootElem);
+    const root = createRoot(rootElem);
+    root.render(<App name="Hello World" />);
 }

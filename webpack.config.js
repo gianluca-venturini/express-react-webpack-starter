@@ -38,7 +38,7 @@ const moduleConfig = (tscOptions = {}) => ({
  */
 const sourceMapBannerPlugin = new webpack.BannerPlugin({ banner: 'require("source-map-support").install();', raw: true, entryOnly: false });
 
-const htmlPlugin = new HtmlWebpackPlugin({template: './src/frontend/index.html'});
+const htmlPlugin = new HtmlWebpackPlugin({inject: false , template: './src/frontend/index.html'});
 
 const frontendBuild = (name, entryFile, outputFile) => ({
     name: name,
@@ -49,7 +49,7 @@ const frontendBuild = (name, entryFile, outputFile) => ({
     },
     module: moduleConfig({ target: 'ES6', module: 'ES6' }),
     mode: 'development',
-    devtool: 'cheap-module-eval-source-map',
+    devtool: 'cheap-module-source-map',
     resolve: resolveConfig,
     watch: IS_WATCH,
     devServer: {
